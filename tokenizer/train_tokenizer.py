@@ -7,7 +7,29 @@ spm.SentencePieceTrainer.Train(
     model_type='bpe',
     character_coverage=0.9995,
     user_defined_symbols=[
-        "[verse]", "[chorus]", "[bridge]", "[intro]", "[outro]"
-        "<genre_rap>", "<genre_pop>", "<genre_rnb>"
+        # control tokens
+        "<prompt>",
+        "<song>",
+        "</song>",
+        
+        # emotion tokens
+        "<happy>",
+        "<sad>",
+        "<angry>",
+        "<romantic>",
+        
+        # genre tokens
+        "<genre_pop>",
+        "<genre_rap>",
+        "<genre_rock>",
+        "<genre_rb>",
+    
+        # structure tokens
+        "[intro]",
+        "[verse]",
+        "[chorus]",
+        "[bridge]",
+        "[outro]",
     ],
+
 )

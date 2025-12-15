@@ -1,4 +1,6 @@
 # Model hyperparameters finetuned for the hardware I have
+import torch
+
 class Config:
     def __init__(self):
         # Vocab and sequence length
@@ -14,7 +16,7 @@ class Config:
         self.dropout = 0.1
 
         # Optimization
-        self.learning_rate = 3e-4
+        self.learning_rate = 6e-4
         self.weight_decay = 0.01
         self.betas = (0.9, 0.999)
         self.warmup_steps = 1000

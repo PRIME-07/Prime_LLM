@@ -1,3 +1,5 @@
 lyrics_dataset.csv
 cleaned_lyrics_dataset.csv
 data/lyrics_corpus.txt
+checkpoints
+samples
