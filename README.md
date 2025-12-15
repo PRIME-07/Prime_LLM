@@ -30,13 +30,23 @@ I decided that PrimeGPT should follow the standard **decoder-only Transformer** 
 
 ### High-level structure
 
-```mermaid
-graph TD
-    A[Input Tokens] --> B[Token Embedding + Positional Embedding]
-    B --> C[N Transformer Blocks]
-    C --> D[Final LayerNorm]
-    D --> E[Linear LM Head (weight-tied)]
-    E --> F[Next-token logits]
+```text
+    [Input Tokens]
+          │
+          ▼
+[Token Embedding + Positional Embedding]
+          │
+          ▼
+ [N Transformer Blocks]
+          │
+          ▼
+   [Final LayerNorm]
+          │
+          ▼
+[Linear LM Head (weight-tied)]
+          │
+          ▼
+  [Next-token logits]
 ```
 
 ### Core components
@@ -292,6 +302,6 @@ I prioritized understanding over superficial performance, and this project serve
 
 ## 12. Final Note
 
-I built this project to understand how LLMs work — **and why they fail.**
+I built this project to understand how LLMs work **and why they fail.**
 
 That understanding is the real result.
